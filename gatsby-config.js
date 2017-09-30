@@ -1,6 +1,33 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `aceae`,
   },
-  plugins: [`gatsby-plugin-react-helmet`],
+  plugins: [
+    // Plugins
+    `gatsby-plugin-react-helmet`,
+    // Sources
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pieces`,
+        name: 'pieces',
+      },
+    },
+    // Transformers
+    `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1024,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
+    },
+  ],
 }

@@ -4,9 +4,15 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "change-case": "^3.0.1",
     "gatsby": "^1.9.45",
     "gatsby-link": "^1.6.17",
-    "gatsby-plugin-react-helmet": "^1.0.5"
+    "gatsby-plugin-react-helmet": "^1.0.5",
+    "gatsby-remark-images": "^1.5.13",
+    "gatsby-source-filesystem": "^1.5.1",
+    "gatsby-transformer-remark": "^1.7.15",
+    "gatsby-transformer-sharp": "^1.6.7",
+    "ramda": "^0.24.1"
   },
   "keywords": [
     "gatsby"

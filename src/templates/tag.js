@@ -4,19 +4,21 @@ import { titleCase } from 'change-case';
 
 import Pieces from '../components/pieces';
 
-export default function IndexPage(props) {
+export default function Template(props) {
   const { data, pathContext } = props;
   return (
     <div>
+      <h2>{ titleCase(pathContext.tag) }</h2>
       <Pieces pieces={data.allMarkdownRemark.edges} />
     </div>
   );
 }
 
 export const pageQuery = graphql`
-  query AllPiecesPage {
+  query TagPage($tag: String) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___order], order: DESC }
+      filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       edges {
         node {
