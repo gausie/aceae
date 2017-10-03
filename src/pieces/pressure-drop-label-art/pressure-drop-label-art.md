@@ -8,3 +8,7 @@ thumbnail: ./thumbnail.png
 ---
 Commissioned label art for [Pressure Drop Brewery](http://pressuredropbrewing.co.uk/), currently in production.
 Illustrated in Adobe Photoshop, 2017.
+
+![](full.png)
+![](icon.png)
+![](detail.png)

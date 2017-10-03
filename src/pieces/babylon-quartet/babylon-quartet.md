@@ -2,7 +2,6 @@
 title: Babylon Quartet
 tags:
   - illustration
-  - other-thing
 slug: babylon-quartet
 order: 1000
 thumbnail: ./thumbnail.png
@@ -13,4 +12,14 @@ Line art illustrated by hand with Tombow Dual Brush Pens and coloured in Adobe P
 
 Created for print and web, 2017.
 
-![](babylon1.png)
+![](alternative.png)
+An alternate colour version to the selected print.
+
+![](detail.png)
+A detail.
+
+![](line.png)
+The line art.
+
+![](final.png)
+The selected colour scheme for print and web use.
