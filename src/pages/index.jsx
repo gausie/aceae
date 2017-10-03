@@ -1,24 +1,25 @@
 import React from 'react';
-import Helmet from 'react-helmet';
-import { titleCase } from 'change-case';
+import PropTypes from 'prop-types';
 
-import Pieces from '../components/pieces';
+import Pieces from '../components/Pieces';
 
-export default function Template(props) {
-  const { data, pathContext } = props;
+export default function IndexPage(props) {
+  const { data } = props;
   return (
     <div>
-      <h2>{ titleCase(pathContext.tag) }</h2>
       <Pieces pieces={data.allMarkdownRemark.edges} />
     </div>
   );
 }
 
+IndexPage.propTypes = {
+  data: PropTypes.shape().isRequired,
+};
+
 export const pageQuery = graphql`
-  query TagPage($tag: String) {
+  query AllPiecesPage {
     allMarkdownRemark(
       sort: { fields: [frontmatter___order], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
       edges {
         node {

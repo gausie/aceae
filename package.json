@@ -12,7 +12,11 @@
     "gatsby-source-filesystem": "^1.5.1",
     "gatsby-transformer-remark": "^1.7.15",
     "gatsby-transformer-sharp": "^1.6.7",
-    "ramda": "^0.24.1"
+    "prop-types": "^15.6.0",
+    "ramda": "^0.24.1",
+    "react": "^16.0.0",
+    "react-helmet": "^5.2.0",
+    "styled-components": "^2.2.0"
   },
   "keywords": [
     "gatsby"
@@ -26,6 +30,17 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.4.0",
     "prettier": "^1.6.1"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "globals": {
+      "graphql": true
+    }
   }
 }

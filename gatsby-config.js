@@ -1,26 +1,26 @@
 module.exports = {
   siteMetadata: {
-    title: `aceae`,
+    title: 'aceae',
   },
   plugins: [
     // Plugins
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
     // Sources
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pieces`,
         name: 'pieces',
       },
     },
     // Transformers
-    `gatsby-transformer-sharp`,
+    'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve: 'gatsby-remark-images',
             options: {
               maxWidth: 1024,
               linkImagesToOriginal: false,
@@ -30,4 +30,4 @@ module.exports = {
       },
     },
   ],
-}
+};
