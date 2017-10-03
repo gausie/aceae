@@ -1,6 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import PieceNavigation from '../components/PieceNavigation';
@@ -19,6 +20,7 @@ export default function Template({ data, pathContext }) {
 
   return (
     <div>
+      <Helmet title={fm.title} />
       <SubHeader>{ fm.title }</SubHeader>
       <PieceNavigation previous={prev} next={next} tag={undefined} />
       <Content dangerouslySetInnerHTML={{ __html: html }} />
