@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 import qs from 'qs';
 
+import favicon from './favicon.png';
 import './index.css';
 import Header from '../components/Header';
 
@@ -27,6 +28,9 @@ export default function TemplateWrapper({ data, children, location }) {
         meta={[
           { name: 'description', content: 'Portfolio website for the artist, designer and illustrator Aceae' },
           { name: 'keywords', content: 'art, design, illustration' },
+        ]}
+        link={[
+          { rel: 'icon', href: favicon, type: 'image/png' },
         ]}
       />
       <Header tags={allTags} currentTag={currentSlug} />
