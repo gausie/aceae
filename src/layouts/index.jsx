@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
+import qs from 'qs';
 
 import './index.css';
 import Header from '../components/Header';
@@ -13,7 +14,11 @@ const Container = styled.main`
   padding-top: 0;
 `;
 
-export default function TemplateWrapper({ children }) {
+export default function TemplateWrapper({ data, children, location }) {
+  const { allTags } = data.allMarkdownRemark;
+  const { tag } = qs.parse(location.search.substring(1));
+  const currentSlug = tag || location.pathname.split('/').slice(-1)[0];
+
   return (
     <div>
       <Helmet
@@ -24,7 +29,7 @@ export default function TemplateWrapper({ children }) {
           { name: 'keywords', content: 'art, design, illustration' },
         ]}
       />
-      <Header />
+      <Header tags={allTags} currentTag={currentSlug} />
       <Container>
         {children()}
       </Container>
@@ -34,4 +39,17 @@ export default function TemplateWrapper({ children }) {
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func.isRequired,
+  data: PropTypes.shape().isRequired,
+  location: PropTypes.shape().isRequired,
 };
+
+export const pageQuery = graphql`
+  query AllTags {
+    allMarkdownRemark {
+      allTags: group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
+      }
+    }
+  }
+`;

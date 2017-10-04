@@ -17,6 +17,7 @@
     "ramda": "^0.24.1",
     "react": "^16.0.0",
     "react-helmet": "^5.2.0",
+    "react-icons": "^2.2.5",
     "styled-components": "^2.2.0"
   },
   "keywords": [

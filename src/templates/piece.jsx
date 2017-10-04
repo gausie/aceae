@@ -17,8 +17,8 @@ const Content = styled.article`
 
 export default function Template({ data, pathContext, location }) {
   const { frontmatter: fm, html } = data.markdownRemark;
-  const { next, prev } = pathContext;
   const { tag } = qs.parse(location.search.substring(1));
+  const [prev, next] = pathContext.directions[tag || '*'];
 
   return (
     <div>
@@ -33,8 +33,7 @@ export default function Template({ data, pathContext, location }) {
 Template.propTypes = {
   data: PropTypes.shape().isRequired,
   pathContext: PropTypes.shape({
-    prev: PropTypes.string,
-    next: PropTypes.string,
+    directions: PropTypes.string,
   }).isRequired,
   location: PropTypes.shape({
     search: PropTypes.string,
@@ -43,11 +42,10 @@ Template.propTypes = {
 
 export const pageQuery = graphql`
   query PieceByPath($slug: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+    markdownRemark(fields: { slug: { eq: $slug } }) {
       html
       frontmatter {
         title
-        slug
       }
     }
   }

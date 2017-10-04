@@ -72,7 +72,12 @@ export default function Pieces({ pieces, appendTag }) {
 }
 
 Pieces.propTypes = {
-  pieces: PropTypes.shape().isRequired,
+  pieces: PropTypes.arrayOf(PropTypes.shape({
+    node: PropTypes.shape({
+      frontmatter: PropTypes.shape(),
+      fields: PropTypes.shape(),
+    }),
+  })).isRequired,
   appendTag: PropTypes.string,
 };
 

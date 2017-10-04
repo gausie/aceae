@@ -1,25 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { titleCase } from 'change-case';
 
 import Pieces from '../components/Pieces';
-
-const SubHeader = styled.h2`
-  text-align: center;
-`;
 
 export default function Template(props) {
   const { data, pathContext } = props;
   const { tag } = pathContext;
-  return (
-    <div>
-      <SubHeader>
-        <span role="img" aria-label="Tag">🔖</span> { titleCase(tag) }
-      </SubHeader>
-      <Pieces pieces={data.allMarkdownRemark.edges} appendTag={tag} />
-    </div>
-  );
+  return <Pieces pieces={data.allMarkdownRemark.edges} appendTag={tag} />;
 }
 
 Template.propTypes = {
