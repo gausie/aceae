@@ -2,6 +2,7 @@
 title: Square Root + Draughts
 tags:
   - illustration
+  - design
 slug: square-root-and-draughts-poster
 order: 998
 thumbnail: ./thumbnail.jpg

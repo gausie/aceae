@@ -20,16 +20,18 @@ const buttonIfNotNull = (destination, label) => (
 );
 
 export default function PieceNavigation({ next, previous, tag }) {
+  const prevDestination = tag === '' ? previous : `${previous}?tag=${tag}`;
+  const nextDestination = tag === '' ? next : `${next}?tag=${tag}`;
   return (
     <Row>
       <Column position="left">
-        {buttonIfNotNull(previous, '⇐ Previous')}
+        {buttonIfNotNull(prevDestination, '⇐ Previous')}
       </Column>
       <Column position="center">
-        {buttonIfNotNull(tag, tag === '' ? 'Everything' : titleCase(tag))}
+        {buttonIfNotNull(tag, tag === '' ? 'Everything' : <span><span role="img" aria-label="Tag">🔖</span> {titleCase(tag)}</span>)}
       </Column>
       <Column position="right">
-        {buttonIfNotNull(next, 'Next ⇒')}
+        {buttonIfNotNull(nextDestination, 'Next ⇒')}
       </Column>
     </Row>
   );

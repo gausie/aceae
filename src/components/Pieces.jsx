@@ -43,7 +43,7 @@ const ThumbnailContainer = styled.figure`
   }
 `;
 
-export default function Pieces({ pieces }) {
+export default function Pieces({ pieces, appendTag }) {
   const items = pieces.map(({ node: { frontmatter: fm } }) => {
     let thumb = null;
     if (fm.thumbnail) {
@@ -51,9 +51,11 @@ export default function Pieces({ pieces }) {
       thumb = <ThumbnailImage src={src} alt={fm.title} />;
     }
 
+    const destination = appendTag ? `${fm.slug}?tag=${appendTag}` : fm.slug;
+
     return (
       <Item key={fm.slug}>
-        <Link to={fm.slug}>
+        <Link to={destination}>
           <ThumbnailContainer>
             { thumb }
             <ThumbnailCaption>{fm.title}</ThumbnailCaption>
@@ -68,4 +70,9 @@ export default function Pieces({ pieces }) {
 
 Pieces.propTypes = {
   pieces: PropTypes.shape().isRequired,
+  appendTag: PropTypes.string,
+};
+
+Pieces.defaultProps = {
+  appendTag: null,
 };
