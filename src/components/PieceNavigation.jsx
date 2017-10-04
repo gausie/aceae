@@ -13,9 +13,18 @@ const Column = styled.div`
   text-align: ${({ position }) => position};
 `;
 
+const Button = styled.button`
+  font-family: sans-serif;
+  background-color: white;
+  border: black 2px solid;
+  font-weight: 600;
+  padding: 0.2em 0.7em;
+  cursor: pointer;
+`;
+
 const buttonIfNotNull = (destination, label) => (
   destination !== null ?
-    <button onClick={() => navigateTo(destination)}>{label}</button> :
+    <Button onClick={() => navigateTo(destination)}>{label}</Button> :
     '\u00A0'
 );
 
