@@ -5,6 +5,7 @@ import Link from 'gatsby-link';
 import styled from 'styled-components';
 import { FaFacebook, FaTwitter, FaInstagram, FaEnvelope, FaTag, FaCircle } from 'react-icons/lib/fa';
 
+import commonButton from './style-utils';
 import Button from './Button';
 
 const Row = styled.nav`
@@ -15,15 +16,14 @@ const Row = styled.nav`
 `;
 
 const IconLink = styled.a`
-  color: black;
+  ${commonButton}
   margin: 0 0.5rem;
 `;
 
 const TagLink = styled(Link)`
+  ${commonButton}
   margin: 0 0.5rem;
-  color: black;
   text-decoration: ${({ active }) => (active ? 'underline' : 'none')};
-  outline: 0;
 `;
 
 export default function TopNavigation({ tags, currentTag }) {
