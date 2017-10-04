@@ -12,9 +12,11 @@ exports.createPages = async ({ boundActionCreators, graphql }) => {
         edges {
           node {
             html
+            fields {
+              slug
+            }
             frontmatter {
               order
-              slug
               tags
             }
           }
@@ -25,31 +27,77 @@ exports.createPages = async ({ boundActionCreators, graphql }) => {
 
   if (errors) return Promise.reject(errors);
 
-  const { edges } = data.allMarkdownRemark;
+  const selectOrder = R.path(['frontmatter', 'order']);
+  const selectSlug = R.path(['fields', 'slug']);
+  const selectTags = R.path(['frontmatter', 'tags']);
 
-  // Create page for each piece
-  const slugsByOrder = R.compose(
-    R.map(R.path(['node', 'frontmatter', 'slug'])),
-    R.sortBy(R.path(['node', 'frontmatter', 'order'])),
-  )(edges);
+  const pieces = data.allMarkdownRemark.edges.map(R.prop('node'));
+  const piecesByOrder = R.sort(R.descend(selectOrder), pieces);
 
-  const piecePages = slugsByOrder.map((slug, i) => ({
-    path: `/${slug}`,
-    component: pieceTemplate,
-    context: { slug, next: slugsByOrder[i - 1], prev: slugsByOrder[i + 1] },
-  }));
+  const findNextByTag = (tag, current) => R.find(R.compose(
+    R.contains(tag),
+    selectTags,
+  ), R.drop(current + 1, piecesByOrder));
+
+  const lastByTag = {};
+  const allTags = new Set();
+
+  const piecePages = piecesByOrder.map((piece, i) => {
+    const tags = selectTags(piece);
+    const slug = selectSlug(piece);
+
+    const directions = tags.reduce(
+      (acc, tag) => ({
+        ...acc,
+        [tag]: [lastByTag[tag], selectSlug(findNextByTag(tag, i))],
+      }),
+      { '*': [
+        selectSlug(piecesByOrder[i - 1]),
+        selectSlug(piecesByOrder[i + 1]),
+      ] },
+    );
+
+    tags.forEach((tag) => {
+      allTags.add(tag);
+      lastByTag[tag] = slug;
+    });
+
+    return {
+      path: `/${slug}`,
+      component: pieceTemplate,
+      context: { slug, directions },
+    };
+  });
 
   // Create page for each tag
-  const tagPages = R.compose(
-    R.map(tag => ({
-      path: `/${tag}`,
-      component: tagTemplate,
-      context: { tag },
-    })),
-    R.uniq,
-    R.reduce(R.concat, []),
-    R.map(R.path(['node', 'frontmatter', 'tags'])),
-  )(edges);
+  const tagPages = [...allTags].map(tag => ({
+    path: `/${tag}`,
+    component: tagTemplate,
+    context: { tag },
+  }));
 
-  return R.forEach(createPage, [...piecePages, ...tagPages]);
+  return [...piecePages, ...tagPages].forEach((obj) => {
+    createPage(obj);
+  });
+};
+
+// Add custom url pathname for blog posts.
+exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
+  const { createNodeField } = boundActionCreators;
+
+  if (node.internal.type === 'File') {
+    const parsedFilePath = p.parse(node.absolutePath);
+    const [directoryName] = parsedFilePath.dir.split(p.sep).slice(-1);
+    createNodeField({ node, name: 'directoryName', value: directoryName });
+  } else if (
+    node.internal.type === 'MarkdownRemark'
+  ) {
+    const fileNode = getNode(node.parent);
+    const slug = node.frontmatter.slug || fileNode.fields.directoryName;
+    createNodeField({
+      node,
+      name: 'slug',
+      value: slug,
+    });
+  }
 };

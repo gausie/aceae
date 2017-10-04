@@ -4,12 +4,8 @@ import PropTypes from 'prop-types';
 import Pieces from '../components/Pieces';
 
 export default function IndexPage(props) {
-  const { data } = props;
-  return (
-    <div>
-      <Pieces pieces={data.allMarkdownRemark.edges} />
-    </div>
-  );
+  const { data: { allMarkdownRemark: { edges } } } = props;
+  return <Pieces pieces={edges} />;
 }
 
 IndexPage.propTypes = {
@@ -23,9 +19,11 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             title
-            slug
             thumbnail {
               childImageSharp {
                 responsiveSizes(maxWidth: 400) {

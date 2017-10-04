@@ -44,21 +44,24 @@ const ThumbnailContainer = styled.figure`
 `;
 
 export default function Pieces({ pieces, appendTag }) {
-  const items = pieces.map(({ node: { frontmatter: fm } }) => {
+  const items = pieces.map(({ node }) => {
+    const { title, thumbnail } = node.frontmatter;
+    const { slug } = node.fields;
+
     let thumb = null;
-    if (fm.thumbnail) {
-      const { src } = fm.thumbnail.childImageSharp.responsiveSizes;
-      thumb = <ThumbnailImage src={src} alt={fm.title} />;
+    if (thumbnail) {
+      const { src } = thumbnail.childImageSharp.responsiveSizes;
+      thumb = <ThumbnailImage src={src} alt={title} />;
     }
 
-    const destination = appendTag ? `${fm.slug}?tag=${appendTag}` : fm.slug;
+    const destination = appendTag ? `${slug}?tag=${appendTag}` : slug;
 
     return (
-      <Item key={fm.slug}>
+      <Item key={slug}>
         <Link to={destination}>
           <ThumbnailContainer>
             { thumb }
-            <ThumbnailCaption>{fm.title}</ThumbnailCaption>
+            <ThumbnailCaption>{title}</ThumbnailCaption>
           </ThumbnailContainer>
         </Link>
       </Item>

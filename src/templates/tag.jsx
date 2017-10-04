@@ -37,12 +37,14 @@ export const pageQuery = graphql`
     ) {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             title
-            slug
             thumbnail {
               childImageSharp {
-                responsiveSizes(maxWidth: 400) {
+                responsiveSizes(maxWidth: 200) {
                   src
                   srcSet
                   sizes
