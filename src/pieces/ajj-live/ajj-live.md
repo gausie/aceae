@@ -42,8 +42,8 @@ Click the cog in the bottom right to change the quality to 1080p!</p>
 
 ![](IMG_2814bw-wm.png)
 
-![](IMG_2975 - wm.png)
-
+![](IMG_2975-wm.png)
+![](bigbird-wm.png)
 ![](IMG_2981-wm.png)
 
 ![](IMG_2986-wm.png)
