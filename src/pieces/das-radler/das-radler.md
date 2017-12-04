@@ -10,6 +10,7 @@ Commissioned label art, text, and t-shirt design for [Square Root London Soda](h
 
 Line art illustrated by hand with Tombow Dual Brush Pens and coloured in Adobe Photoshop, 2017.
 
+![](DasR-Full-wm.png)
 ![](DasR-Crop-wm.png)
 ![](DasR-Detail-wm.png)
-![](DasR-Shirt-wm.png
+![](DasR-Shirt-wm.png)
