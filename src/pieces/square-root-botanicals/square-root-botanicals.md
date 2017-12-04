@@ -10,25 +10,25 @@ Commissioned botanical illustrations for London-based soda company, [Square Root
 
 Ink and pencil, ongoing. Photos by [Charlie McKay](http://www.charliemckay.com/).
 
-![](SRB-StrawberryFlower-WM)
+![](SRB-StrawberryFlower-WM.png)
 Strawberry Flower
-![](SRB-StrawberryFlower-Detail-WM)
-![](SRB-Cedrata-WM)
+![](SRB-StrawberryFlower-Detail-WM.png)
+![](SRB-Cedrata-WM.png)
 Cedrata/Etrog
-![](SRB-Cedrata-Detail-WM)
+![](SRB-Cedrata-Detail-WM.png)
 ![](SRB-Bottles)
-![](SRB-Rhubarb-WM)
+![](SRB-Rhubarb-WM.png)
 Rhubarb
-![](SRB-Rhubarb-Detail-WM)
-![](SRB-Peach-WM)
+![](SRB-Rhubarb-Detail-WM.png)
+![](SRB-Peach-WM.png)
 Peach
-![](SRB-Peach-Detail-2-WM)
-![](SRB-Insides-WM)
+![](SRB-Peach-Detail-2-WM.png)
+![](SRB-Insides-WM.png)
 Blood orange, peach, and cucumber
-![](SRB-WormwoodLeaves-WM)![](SRB-Wormwood-WM)
+![](SRB-WormwoodLeaves-WM.png)![](SRB-Wormwood-WM.png)
 Wormwood
-![](SRB-Hops-WM)
+![](SRB-Hops-WM.png)
 Hops
-![](SRB-Hops-Detail-WM)
+![](SRB-Hops-Detail-WM.png)
 ![](SRB-Bottles-2)
 
