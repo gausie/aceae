@@ -15,7 +15,7 @@ Created for print and web, 2017.
 ![](BQ - Full Alt - WM.png)
 An alternate colour version to the final print.
 
-![](BQ - Detail - WM.png)
+![](BQ-Detail-WM.png)
 A detail.
 
 ![](BQ - Outlines - WM.png)
