@@ -8,20 +8,15 @@ thumbnail: ./thumbnail.jpg
 ---
 A selection of photographs and a video taken during the last three shows of the 2014 [AJJ](http://www.ajjtheband.com/) UK + European tour.
 
-Share & see these on my: [Tumblr](http://notnat.tumblr.com/post/108010122506/andrew-jackson-jihad-live) – [Facebook](https://www.facebook.com/notnat/photos/a.1414810718733079.1073741828.1403046316576186/1575053459375470/?type=1&permPage=1) – [Twitter](https://twitter.com/tweetnotnat/status/555103912882360320) – [Instagram](http://instagram.com/p/xzvpu1wKq4/) – [Behance](https://www.behance.net/gallery/22679631/Andrew-Jackson-Jihad-Live)  – [Youtube](https://www.youtube.com/watch?v=C8fojIRtO8o)
-For questions, commissions, & hire, contact me via email: [hi@notn.at](mailto://hi@notn.at)
-
 <p style="text-align: center">—————————————————————————————————</p>
 
 <p style="text-align: center">• Sean Bonnette @ Banquet Records, Kingston, UK, 22 October 2014 •</p>
 
-![](banquet1.jpg)
+![](IMG_2671bw-wm.png)
 
-![](banquet2.jpg)
+![](IMG_2674bw-wm.png)
 
-![](banquet3.jpg)
-
-![](banquet4.jpg)
+![](IMG_2679bw-wm.png)
 
 <p style="text-align: center; font-style: italic">Video shot from my knee of Sean performing Personal Space Invader.
 Click the cog in the bottom right to change the quality to 1080p!</p>
@@ -29,50 +24,32 @@ Click the cog in the bottom right to change the quality to 1080p!</p>
 
 <p style="text-align: center">• Andrew Jackson Jihad @ The Fighting Cocks, Kingston, UK, 22 October 2014 •</p>
 
-![](cocks1.jpg)
+![](IMG_2725bw-wm.png)
 
-![](cocks2.jpg)
+![](IMG_2740-wm.png)
 
-![](cocks3.jpg)
+![](IMG_2741bw-wm.png)
 
-![](cocks4.jpg)
-
-![](cocks5.jpg)
+![](IMG_2746bw-wm.png)
 
 <p style="text-align: center">• Andrew Jackson Jihad @ The Dome, London, UK, 22 October 2014 •</p>
 
 <p style="text-align: center">Featuring members from Caves for the ‘Big Bird’ finale.</p>
 
-![](dome1.jpg)
+![](IMG_2783bw-wm.png)
 
-![](dome2.jpg)
+![](IMG_2784bw-wm.png)
 
-![](dome3.jpg)
+![](IMG_2814bw-wm.png)
 
-![](dome4.jpg)
+![](IMG_2975 - wm.png)
 
-![](dome5.jpg)
+![](IMG_2981-wm.png)
 
-![](dome6.jpg)
+![](IMG_2986-wm.png)
 
-![](dome7.jpg)
+![](IMG_2995-wm.png)
 
-![](dome8.jpg)
-
-![](dome9.jpg)
-
-![](dome10.jpg)
-
-![](dome11.jpg)
-
-![](dome12.jpg)
-
-![](dome13.jpg)
-
-![](dome14.jpg)
-
-![](dome15.jpg)
-
-![](dome16.jpg)
+![](IMG_3002bw-wm.png)
 
 <p style="text-align: center">—————————————————————————————————</p>
