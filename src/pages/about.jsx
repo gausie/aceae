@@ -10,6 +10,6 @@ export default () => (
     <p>
       I’m currently available for commissions and collaborations.
     </p>
-    <p>Get in touch via e-mail: <a href="mailto://hi@notn.at">hi@notn.at</a>.</p>
+    <p>Get in touch via e-mail: <a href="mailto://n.gorodnitski@gmail.com">n.gorodnitski@gmail.com</a>.</p>
   </div>
 );
