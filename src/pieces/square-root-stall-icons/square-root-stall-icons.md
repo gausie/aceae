@@ -4,7 +4,7 @@ tags:
   - illustration
 slug: square-root-stall-icons
 order: 1000
-thumbnail: ./Thumbnail.png
+thumbnail: ./float-thumbnail.png
 ---
 Commissioned icons for [Square Root London Soda](https://www.squarerootsoda.co.uk/) stall at Camden Market.
 
