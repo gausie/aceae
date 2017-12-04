@@ -4,7 +4,7 @@ tags:
   - illustration
 slug: babylon-quartet
 order: 1000
-thumbnail: ./thumbnail.png
+thumbnail: ./BQ - Thumbnail.png
 ---
 Commissioned poster art for [Babylon Quartet](http://babylonquartet.com) and their 2017 performance, "[Dusk Till Dawn](https://www.facebook.com/events/458628047818318)", at the Koninklijk Conservatorium.
 
@@ -12,14 +12,14 @@ Line art illustrated by hand with Tombow Dual Brush Pens and coloured in Adobe P
 
 Created for print and web, 2017.
 
-![](alternative.png)
-An alternate colour version to the selected print.
+![](BQ - Full Alt - WM.png)
+An alternate colour version to the final print.
 
-![](detail.png)
+![](BQ - Detail - WM.png)
 A detail.
 
-![](line.png)
+![](BQ - Outlines - WM.png)
 The line art.
 
-![](final.png)
+![](BQ - Full Print - WM.png)
 The selected colour scheme for print and web use.
