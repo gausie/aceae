@@ -20,7 +20,10 @@ export const pageQuery = graphql`
   query TagPage($tag: String) {
     allMarkdownRemark(
       sort: { fields: [frontmatter___order], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      filter: {
+        frontmatter: { tags: { in: [$tag] } }
+        html: { ne: "" }
+      }
     ) {
       edges {
         node {

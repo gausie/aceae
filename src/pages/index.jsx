@@ -16,6 +16,7 @@ export const pageQuery = graphql`
   query AllPiecesPage {
     allMarkdownRemark(
       sort: { fields: [frontmatter___order], order: DESC }
+      filter: { html: { ne: "" } }
     ) {
       edges {
         node {
