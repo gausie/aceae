@@ -16,8 +16,5 @@ Soda float
 ![](Float-Smores-wm.png)
 Smores hot chocolate
 
-![](Float-Lemon-wm.png)
-Soda
-
 ![](Float-Punch-wm.png)
-Punch
+Soda
