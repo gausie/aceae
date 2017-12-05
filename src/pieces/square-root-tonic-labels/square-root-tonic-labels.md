@@ -3,7 +3,7 @@ title: Square Root Tonic Labels
 tags:
   - illustration
 slug: square-root-tonic-labels
-order: 1000
+order: 1015
 thumbnail: ./Tonics-Thumbnail.png
 ---
 Commissioned label art for [Square Root London Soda](https://www.squarerootsoda.co.uk/) Hop and Artemisia Tonics.
