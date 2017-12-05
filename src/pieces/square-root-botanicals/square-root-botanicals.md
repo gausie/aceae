@@ -9,8 +9,9 @@ thumbnail: ./SRB-Thumbnail.png
 Commissioned botanical illustrations for London-based soda company, [Square Root London](http://squarerootsoda.co.uk). I produce illustrations of key ingredients for new flavours which the owners incorporate into their label design.
 
 Ink and pencil, ongoing. Photos by [Charlie McKay](http://www.charliemckay.com/).
-<p style="text-align: center">
+
 ![](SRB-StrawberryFlower-WM.png)
+<p style="text-align: center">
 Strawberry Flower
 
 ![](SRB-StrawberryFlower-Detail-WM.png)
