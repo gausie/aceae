@@ -11,9 +11,15 @@ Commissioned label art for [Square Root London Soda](https://www.squarerootsoda.
 Line art illustrated by hand with Tombow Dual Brush Pens and coloured in Adobe Adobe Illustrator, 2017.
 
 ![](HopT-Full-wm.png)
+
 ![](HopT-Detail1-wm.png)
+
 ![](HopT-Detail2-wm.png)
+
 ![](HopT-Detail3-wm.png)
+
 ![](ArtemisiaT-wm.png)
+
 ![](ArteT-Detail2-wm.png)
+
 ![](ArteT-Detail3-wm.png)
