@@ -11,5 +11,6 @@ Logo and website banner design for London’s Best Coffee Blog of 2014, [Cups of
 Tombow dual brush pen and digital illustration in Adobe Photoshop, September 2014.
 
 ![](CoffeeLogo-WM.png)
+
 ![](CoffeeBanner-WM.png)
 Banner design with my lettering
