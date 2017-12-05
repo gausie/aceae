@@ -3,7 +3,7 @@ title: Pressure Drop Label Art
 tags:
   - illustration
 slug: pressure-drop-label-art
-order: 999
+order: 1000
 thumbnail: ./PD-Thumbnail.png
 ---
 Commissioned label art for [Pressure Drop Brewery](http://pressuredropbrewing.co.uk/), currently in production.
