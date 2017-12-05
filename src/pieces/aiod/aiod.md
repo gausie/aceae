@@ -11,5 +11,6 @@ AIOD (All In One Day) is a work-in-progress graphic novel documenting my first v
 Digital and physical illustration, photography and video, to be released online in parts.
 
 ![](aiodcover-wm.png)
+
 ![](aiodpanel-wm.png)
 
