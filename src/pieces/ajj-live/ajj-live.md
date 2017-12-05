@@ -8,8 +8,6 @@ thumbnail: ./ajj-live-thumbnail.png
 ---
 A selection of photographs and a video taken during the last three shows of the 2014 [AJJ](http://www.ajjtheband.com/) UK + European tour.
 
-<p style="text-align: center">—————————————————————————————————</p>
-
 <p style="text-align: center">• Sean Bonnette @ Banquet Records, Kingston, UK, 22 October 2014 •</p>
 
 ![](IMG_2671bw-wm.png)
@@ -51,5 +49,3 @@ Click the cog in the bottom right to change the quality to 1080p!</p>
 ![](IMG_2995-wm.png)
 
 ![](IMG_3002bw-wm.png)
-
-<p style="text-align: center">—————————————————————————————————</p>
