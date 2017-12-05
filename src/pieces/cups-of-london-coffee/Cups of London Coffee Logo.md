@@ -13,4 +13,4 @@ Tombow dual brush pen and digital illustration in Adobe Photoshop, September 201
 ![](CoffeeLogo-WM.png)
 
 ![](CoffeeBanner-WM.png)
-Banner design with my lettering
+<p style="text-align: center">Banner design with my lettering</p>
