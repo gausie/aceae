@@ -3,7 +3,7 @@ title: Babylon Quartet
 tags:
   - illustration
 slug: babylon-quartet
-order: 1000
+order: 1010
 thumbnail: ./BQ-Thumbnail.png
 ---
 Commissioned poster art for [Babylon Quartet](http://babylonquartet.com) and their 2017 performance, "[Dusk Till Dawn](https://www.facebook.com/events/458628047818318)", at the Koninklijk Conservatorium.
