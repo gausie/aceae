@@ -3,7 +3,7 @@ title: Das Radler
 tags:
   - illustration
 slug: das-radler
-order: 1000
+order: 1005
 thumbnail: ./DasR-Thumbnail.png
 ---
 Commissioned label art, text, and t-shirt design for [Square Root London Soda](https://www.squarerootsoda.co.uk/) and [Howling Hops](http://howlinghops.co.uk/) lemonade and beer hybrid, Das Radler.
