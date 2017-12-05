@@ -11,10 +11,10 @@ Commissioned icons for [Square Root London Soda](https://www.squarerootsoda.co.u
 Created in Adobe Illustrator, 2017.
 
 ![](Float-Float-wm.png)
-Soda float
+<p style="text-align: center">Soda float</p>
 
 ![](Float-Smores-wm.png)
-Smores hot chocolate
+<p style="text-align: center">Smores hot chocolate</p>
 
 ![](Float-Punch-wm.png)
-Soda
+<p style="text-align: center">Soda</p>
