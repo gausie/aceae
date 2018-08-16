@@ -31,10 +31,10 @@ export default function TopNavigation({ tags, currentTag }) {
     <div>
       <Row>
         <Button to="/about">About</Button>
-        <IconLink target="_blank" href="http://facebook.com/notnat"><FaFacebook width={30} height={30} /></IconLink>
-        <IconLink target="_blank" href="http://twitter.com/nataceae"><FaTwitter width={30} height={30} /></IconLink>
-        <IconLink target="_blank" href="http://instagram.com/nataceae"><FaInstagram width={30} height={30} /></IconLink>
-        <IconLink target="_blank" href="mailto://hi@notn.at"><FaEnvelope width={30} height={30} /></IconLink>
+        <IconLink target="_blank" href="http://instagram.com/aceae_"><FaInstagram width={30} height={30} /></IconLink>
+        <IconLink target="_blank" href="http://twitter.com/aceae_"><FaTwitter width={30} height={30} /></IconLink>
+        <IconLink target="_blank" href="http://facebook.com/aceae.art"><FaFacebook width={30} height={30} /></IconLink>
+        <IconLink target="_blank" href="mailto://hello@aceae.co.uk"><FaEnvelope width={30} height={30} /></IconLink>
       </Row>
       <Row>
         <FaTag />
