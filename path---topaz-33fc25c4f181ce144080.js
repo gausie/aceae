@@ -1,0 +1,2 @@
+webpackJsonp([0x934ef7b04d33],{543:function(t,e){t.exports={data:{markdownRemark:{html:'<p><img src="Topaz1.png"></p>',frontmatter:{title:"Topaz"}}},pathContext:{slug:"topaz",directions:{"*":["theme","vertical-bed"],illustration:["theme","vertical-bed"]}}}}});
+//# sourceMappingURL=path---topaz-33fc25c4f181ce144080.js.map
