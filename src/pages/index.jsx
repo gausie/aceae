@@ -1,36 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useStaticQuery, graphql } from 'gatsby';
 
+import Layout from '../components/Layout';
 import Pieces from '../components/Pieces';
 
-export default function IndexPage(props) {
-  const { data: { allMarkdownRemark: { edges } } } = props;
-  return <Pieces pieces={edges} />;
-}
-
-IndexPage.propTypes = {
-  data: PropTypes.shape().isRequired,
-};
-
-export const pageQuery = graphql`
-  query AllPiecesPage {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___order], order: DESC }
-      filter: { html: { ne: "" } }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            thumbnail {
-              childImageSharp {
-                responsiveSizes(maxWidth: 400) {
-                  src
-                  srcSet
-                  sizes
+export default function IndexPage({ location }) {
+  const data = useStaticQuery(graphql`
+    query AllPiecesPage {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___order], order: DESC }
+        filter: { html: { ne: "" } }
+      ) {
+        edges {
+          node {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+              thumbnail {
+                childImageSharp {
+                  fixed(width: 200, height: 200) {
+                    ...GatsbyImageSharpFixed
+                  }
                 }
               }
             }
@@ -38,5 +31,17 @@ export const pageQuery = graphql`
         }
       }
     }
-  }
-`;
+  `);
+
+  const { allMarkdownRemark: { edges } } = data;
+  return (
+    <Layout location={location}>
+      <Pieces pieces={edges} />
+    </Layout>
+  );
+}
+
+IndexPage.propTypes = {
+  data: PropTypes.shape().isRequired,
+};
+

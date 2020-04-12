@@ -14,6 +14,7 @@ module.exports = {
         name: 'pieces',
       },
     },
+    'gatsby-plugin-sharp',
     // Transformers
     'gatsby-transformer-sharp',
     {

@@ -1,12 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 
+import Layout from '../components/Layout';
 import Pieces from '../components/Pieces';
 
-export default function Template(props) {
-  const { data, pathContext } = props;
+export default function Template({ data, location, pathContext }) {
   const { tag } = pathContext;
-  return <Pieces pieces={data.allMarkdownRemark.edges} appendTag={tag} />;
+  return (
+    <Layout location={location}>
+      <Pieces pieces={data.allMarkdownRemark.edges} appendTag={tag} />
+    </Layout>
+  );
 }
 
 Template.propTypes = {
@@ -16,29 +21,26 @@ Template.propTypes = {
   }).isRequired,
 };
 
-export const pageQuery = graphql`
-  query TagPage($tag: String) {
-    allMarkdownRemark(
-      sort: { fields: [frontmatter___order], order: DESC }
-      filter: {
-        frontmatter: { tags: { in: [$tag] } }
-        html: { ne: "" }
-      }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            thumbnail {
-              childImageSharp {
-                responsiveSizes(maxWidth: 200) {
-                  src
-                  srcSet
-                  sizes
-                }
+export const query = graphql`
+query TagPage($tag: String) {
+  allMarkdownRemark(
+    sort: { fields: [frontmatter___order], order: DESC }
+    filter: {
+      frontmatter: { tags: { in: [$tag] } }
+      html: { ne: "" }
+    }
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          thumbnail {
+            childImageSharp {
+              fixed(width: 200, height: 200) {
+                ...GatsbyImageSharpFixed
               }
             }
           }
@@ -46,4 +48,5 @@ export const pageQuery = graphql`
       }
     }
   }
+}
 `;

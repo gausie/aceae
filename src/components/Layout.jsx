@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import qs from 'qs';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import favicon from './favicon.png';
-import './index.css';
-import Header from '../components/Header';
+import './layout.css';
+import Header from './Header';
 
 const Container = styled.main`
   margin: 0 auto;
@@ -15,7 +16,18 @@ const Container = styled.main`
   padding-top: 0;
 `;
 
-export default function TemplateWrapper({ data, children, location }) {
+export default function TemplateWrapper({ children, location }) {
+  const data = useStaticQuery(graphql`
+    query AllTags {
+      allMarkdownRemark {
+        allTags: group(field: frontmatter___tags) {
+          fieldValue
+          totalCount
+        }
+      }
+    }
+  `);
+
   const { allTags } = data.allMarkdownRemark;
   const { tag } = qs.parse(location.search.substring(1));
   const currentSlug = tag || location.pathname.split('/').slice(-1)[0];
@@ -35,7 +47,7 @@ export default function TemplateWrapper({ data, children, location }) {
       />
       <Header tags={allTags} currentTag={currentSlug} />
       <Container>
-        {children()}
+        {children}
       </Container>
     </div>
   );
@@ -47,13 +59,3 @@ TemplateWrapper.propTypes = {
   location: PropTypes.shape().isRequired,
 };
 
-export const pageQuery = graphql`
-  query AllTags {
-    allMarkdownRemark {
-      allTags: group(field: frontmatter___tags) {
-        fieldValue
-        totalCount
-      }
-    }
-  }
-`;

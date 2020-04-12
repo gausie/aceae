@@ -1,10 +1,11 @@
-/* eslint-disable react/no-danger */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import qs from 'qs';
+import { graphql } from 'gatsby';
 
+import Layout from '../components/Layout';
 import PieceNavigation from '../components/PieceNavigation';
 
 const SubHeader = styled.h2`
@@ -21,12 +22,12 @@ export default function Template({ data, pathContext, location }) {
   const [prev, next] = pathContext.directions[tag || '*'];
 
   return (
-    <div>
+    <Layout location={location}>
       <Helmet title={fm.title} />
       <SubHeader>{ fm.title }</SubHeader>
       <PieceNavigation previous={prev} next={next} tag={tag} />
       <Content dangerouslySetInnerHTML={{ __html: html }} />
-    </div>
+    </Layout>
   );
 }
 
@@ -40,7 +41,7 @@ Template.propTypes = {
   }).isRequired,
 };
 
-export const pageQuery = graphql`
+export const query = graphql`
   query PieceByPath($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html

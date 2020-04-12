@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
+import Image from 'gatsby-image';
 
 const List = styled.ul`
   display: flex;
@@ -14,7 +15,7 @@ const Item = styled.li`
   margin: 0.5em;
 `;
 
-const ThumbnailImage = styled.img`
+const ThumbnailImage = styled(Image)`
   height: 200px;
   margin: 0;
   width: 200px;
@@ -50,8 +51,7 @@ export default function Pieces({ pieces, appendTag }) {
 
     let thumb = null;
     if (thumbnail) {
-      const { src } = thumbnail.childImageSharp.responsiveSizes;
-      thumb = <ThumbnailImage src={src} alt={title} />;
+      thumb = <Image fixed={thumbnail.childImageSharp.fixed} alt={title} />;
     }
 
     const destination = appendTag ? `${slug}?tag=${appendTag}` : slug;
