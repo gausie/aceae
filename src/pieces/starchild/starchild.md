@@ -3,7 +3,7 @@ title: Starchild
 tags:
   - photography
 slug: starchild
-order: 1000
+order: 200
 thumbnail: ./Starchild-Thumbnail.png
 ---
 Commissioned poster art for [Babylon Quartet](http://babylonquartet.com) and their 2017 performance, "[Dusk Till Dawn](https://www.facebook.com/events/458628047818318)", at the Koninklijk Conservatorium.

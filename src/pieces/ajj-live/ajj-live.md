@@ -3,7 +3,7 @@ title: AJJ Live
 tags:
   - photography
 slug: ajj-live
-order: 995
+order: 200
 thumbnail: ./ajj-live-thumbnail.png
 ---
 A selection of photographs and a video taken during the last three shows of the 2014 [AJJ](http://www.ajjtheband.com/) UK + European tour.

@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'aceae',
+    pathPrefx: '/',
   },
   plugins: [
     // Plugins

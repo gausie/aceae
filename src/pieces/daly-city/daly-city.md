@@ -3,7 +3,7 @@ title: Daly City
 tags:
   - photography
 slug: daly-city
-order: 1000
+order: 200
 thumbnail: ./Daly-Thumbnail.png
 ---
 Personal photographs, Daly City, 2011.
