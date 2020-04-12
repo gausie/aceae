@@ -1,8 +1,8 @@
 const R = require('ramda');
 const p = require('path');
 
-exports.createPages = async ({ boundActionCreators, graphql }) => {
-  const { createPage } = boundActionCreators;
+exports.createPages = async ({ actions, graphql }) => {
+  const { createPage } = actions;
   const pieceTemplate = p.resolve('src/templates/piece.jsx');
   const tagTemplate = p.resolve('src/templates/tag.jsx');
 
@@ -82,8 +82,8 @@ exports.createPages = async ({ boundActionCreators, graphql }) => {
 };
 
 // Add custom url pathname for blog posts.
-exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-  const { createNodeField } = boundActionCreators;
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions;
 
   if (node.internal.type === 'File') {
     const parsedFilePath = p.parse(node.absolutePath);
