@@ -3,7 +3,7 @@ title: Square Root Botanicals
 tags:
   - illustration
 slug: square-root-botanicals
-order: 1005
+order: 400
 thumbnail: ./SRB-Thumbnail.png
 ---
 Commissioned botanical illustrations for London-based soda company, [Square Root London](http://squarerootsoda.co.uk). I produce illustrations of key ingredients for new flavours which the owners incorporate into their label design.
