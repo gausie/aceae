@@ -2,7 +2,7 @@
 title: Chris
 tags:
   - illustration
-slug: bass
+slug: chris
 order: 300
 thumbnail: ./chris-thumb.png
 ---

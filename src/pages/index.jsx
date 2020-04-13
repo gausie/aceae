@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
@@ -34,14 +33,11 @@ export default function IndexPage({ location }) {
   `);
 
   const { allMarkdownRemark: { edges } } = data;
+
   return (
     <Layout location={location}>
       <Pieces pieces={edges} />
     </Layout>
   );
 }
-
-IndexPage.propTypes = {
-  data: PropTypes.shape().isRequired,
-};
 

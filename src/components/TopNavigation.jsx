@@ -39,10 +39,12 @@ export default function TopNavigation({ tags, currentTag }) {
       <Row>
         <FaTag />
         <TagLink active={!currentTag} to="/">Everything</TagLink>
-        {tags.map(({ fieldValue: tag }) => [
-          <FaCircle size="7px" />,
-          <TagLink active={currentTag === tag} to={tag}>{capitalCase(tag)}</TagLink>,
-        ])}
+        {tags.map(({ fieldValue: tag }) => (
+          <span key={tag}>
+            <FaCircle size="7px" />
+            <TagLink active={currentTag === tag} to={`/${tag}`}>{capitalCase(tag)}</TagLink>
+          </span>
+        ))}
       </Row>
     </div>
   );

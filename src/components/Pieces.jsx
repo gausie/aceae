@@ -58,7 +58,7 @@ export default function Pieces({ pieces, appendTag }) {
 
     return (
       <Item key={slug}>
-        <Link to={destination}>
+        <Link to={`/${destination}`}>
           <ThumbnailContainer>
             { thumb }
             <ThumbnailCaption>{title}</ThumbnailCaption>
