@@ -4,10 +4,12 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.7",
     "change-case": "^4.1.1",
     "gatsby": "^2.20.18",
     "gatsby-image": "^2.3.2",
     "gatsby-plugin-react-helmet": "^3.2.2",
+    "gatsby-plugin-styled-components": "^3.2.1",
     "gatsby-remark-external-links": "^0.0.4",
     "gatsby-remark-images": "^3.2.2",
     "gatsby-source-filesystem": "^2.2.2",
